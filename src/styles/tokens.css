@@ -1,0 +1,19 @@
+:root {
+  /* palette */
+  --brand-900:#003d4c; --brand-700:#006c83; --brand-400:#19a7c4;
+  --sand-50:#f9f9f7; --sand-300:#d6d6d1;
+  --success:#2b884b; --error:#d92d20;
+  --text-primary:#1a1a1a; --text-muted:#555;
+  
+  /* spacing */
+  --space-xs:4px; --space-s:8px; --space-m:16px; --space-l:24px;
+  
+  /* radius & shadow */
+  --radius:12px;
+  --shadow-card:0 2px 8px rgb(0 0 0 / .08);
+  
+  /* type scale (clamp for fluid) */
+  --fs-h1:clamp(2.5rem,1.1vw+2rem,4.2rem);
+  --fs-h2:clamp(1.75rem,.8vw+1.5rem,3rem);
+  --fs-body:1rem; --fs-small:.875rem;
+}

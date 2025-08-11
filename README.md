@@ -8,9 +8,9 @@
 
 ## Phase Checklist
 
-- [ ] Phase 0: Repo Init
-- [ ] Phase 1: Business Analysis
-- [ ] Phase 2: Brand & Style Guides
+- [x] Phase 0: Repo Init
+- [x] Phase 1: Business Analysis
+- [x] Phase 2: Brand & Style Guides
 - [ ] Phase 3: Design Spec & Wireframes
 - [ ] Phase 4: Tech Architecture
 - [ ] Phase 5: Build Sprint 1

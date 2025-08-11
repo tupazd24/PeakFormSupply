@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# # PeakForm Supply
-=======
 # PeakForm Supply
->>>>>>> origin/feature
 
 [Project description]
 
@@ -85,8 +81,4 @@ See [docs/development_plan.md](docs/development_plan.md)
 
 ## Contact / Maintainers
 
-<<<<<<< HEAD
 - Maintainer: @maintainer-handle
-=======
-- Maintainer: @maintainer-handle
->>>>>>> origin/feature

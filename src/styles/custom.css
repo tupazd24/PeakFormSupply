@@ -1,119 +1,109 @@
-/* Custom CSS for PeakForm Supply Homepage */
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* --- Theme tokens (tweak to match your Hero look) --- */
+:root {
+  --pf-maxw: 1200px;
+  --pf-pad:  clamp(16px, 4vw, 32px);
+  --pf-gap:  clamp(12px, 2.5vw, 20px);
+  --pf-bg:   #111827;       /* page bg behind section */
+  --pf-card: #1f2937;       /* card bg */
+  --pf-accent: #f59e0b;     /* CTA / highlight */
+  --pf-text: #f9fafb;       /* main text */
+  --pf-sub:  #9ca3af;       /* sub text */
+  --pf-ring: rgba(245, 158, 11, .45);
 }
 
-.scroll-animate {
-    opacity: 0;
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+/* --- Section shell --- */
+.pf-ig {
+  background: linear-gradient(180deg, rgba(245, 158, 11, 0.06), transparent 45%),
+              var(--pf-bg);
+  color: var(--pf-text);
+}
+.pf-ig__inner {
+  max-width: var(--pf-maxw);
+  margin-inline: auto;
+  padding: calc(var(--pf-pad) * 1.5) var(--pf-pad);
+  text-align: center; /* centers labels */
 }
 
-.scroll-animate.in-view {
-    opacity: 1;
-    transform: translateY(0);
-    animation: fadeIn 0.8s forwards;
+/* --- Labels --- */
+.pf-ig__head h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+  line-height: 1.2;
+  margin: 0 0 .35rem;
+  letter-spacing: 0.2px;
+}
+.pf-ig__sub {
+  color: var(--pf-sub);
+  margin: 0 0 1rem;
 }
 
-/* Countdown Timer */
-.countdown-item {
-    min-width: 60px;
+/* --- Controls --- */
+.pf-ig__controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 .75rem;
+}
+.pf-ig__btn {
+  appearance: none;
+  border: 1px solid transparent;
+  background: var(--pf-card);
+  color: var(--pf-text);
+  padding: .5rem .8rem;
+  border-radius: 999px;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.pf-ig__btn:hover { transform: translateY(-1px); border-color: var(--pf-accent); }
+.pf-ig__btn:focus-visible { outline: none; box-shadow: 0 0 0 4px var(--pf-ring); }
+
+/* --- Scroll area --- */
+.pf-ig__viewport {
+  overflow: hidden; /* keeps edges tidy while still allowing scroll inside track */
+  position: relative;
 }
 
-/* Instagram Feed (legacy grid kept for reference; not used) */
-.instagram-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 1rem;
+/* --- Track uses native horizontal scroll + snap --- */
+.pf-ig__track {
+  list-style: none;
+  display: flex;
+  gap: var(--pf-gap);
+  margin: 0;
+  padding: 0 var(--pf-pad) var(--pf-pad);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.pf-ig__track::-webkit-scrollbar { height: 10px; }
+.pf-ig__track::-webkit-scrollbar-thumb { background: #374151; border-radius: 999px; }
+.pf-ig__track:hover::-webkit-scrollbar-thumb { background: #4b5563; }
+
+/* --- Cards --- */
+.pf-ig__item { flex: 0 0 auto; scroll-snap-align: start; }
+.pf-ig__card {
+  display: block;
+  width: clamp(230px, 26vw, 340px);       /* 1–2 on mobile, ~3–4 on desktop */
+  aspect-ratio: 1 / 1;
+  background: var(--pf-card);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+.pf-ig__card:hover { transform: translateY(-2px); border-color: var(--pf-accent); }
+.pf-ig__card:focus-visible { outline: none; box-shadow: 0 0 0 4px var(--pf-ring); }
+
+.pf-ig__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* Instagram Horizontal Carousel */
-.ig-carousel {
-    position: relative;
+/* Make items a bit wider on very small screens */
+@media (max-width: 420px) {
+  .pf-ig__card { width: min(85vw, 360px); }
 }
-.ig-viewport {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 70%;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    padding: 0.25rem 0.5rem; /* slight padding so focus outline is visible */
-}
-@media (min-width: 640px) {
-    .ig-viewport { grid-auto-columns: 45%; }
-}
-@media (min-width: 1024px) {
-    .ig-viewport { grid-auto-columns: 30%; }
-}
-.ig-slide {
-    scroll-snap-align: start;
-    display: block;
-    position: relative;
-    border-radius: 0.5rem;
-    overflow: hidden;
-}
-.ig-slide img {
-    display: block;
-    width: 100%;
-    height: 14rem; /* h-56 */
-    object-fit: cover;
-}
-@media (min-width: 768px) {
-    .ig-slide img { height: 16rem; } /* md:h-64 */
-}
-.ig-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: #fff;
-    border: none;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 9999px;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    z-index: 10;
-}
-.ig-button.prev { left: 0.25rem; }
-.ig-button.next { right: 0.25rem; }
-.ig-button:focus { outline: 2px solid #f59e0b; outline-offset: 2px; }
-
-/* Customer Quotes Carousel */
-.carousel-container {
-    overflow: hidden;
-    position: relative;
-}
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-.carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    z-index: 10;
-}
-.carousel-button.prev { left: 10px; }
-.carousel-button.next { right: 10px; }

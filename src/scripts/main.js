@@ -34,32 +34,51 @@ let interval = setInterval(countdown, 1000);
 
 // Customer Photo Carousel
 document.addEventListener('DOMContentLoaded', function () {
+    // Customer quotes carousel
     const track = document.querySelector('.carousel-track');
     if (track) {
         const items = Array.from(track.children);
         const nextButton = document.querySelector('.carousel-button.next');
         const prevButton = document.querySelector('.carousel-button.prev');
-        const itemWidth = items[0].getBoundingClientRect().width;
         let currentIndex = 0;
 
         const updateCarousel = () => {
             track.style.transform = `translateX(-${currentIndex * 100}%)`;
         };
 
-        nextButton.addEventListener('click', e => {
+        nextButton.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % items.length;
             updateCarousel();
         });
 
-        prevButton.addEventListener('click', e => {
+        prevButton.addEventListener('click', () => {
             currentIndex = (currentIndex - 1 + items.length) % items.length;
             updateCarousel();
         });
+    }
 
-        // Optional: Auto-play
-        // setInterval(() => {
-        //     currentIndex = (currentIndex + 1) % items.length;
-        //     updateCarousel();
-        // }, 5000);
+    // Instagram horizontal carousel controls
+    const igViewport = document.querySelector('.ig-viewport');
+    const igPrev = document.querySelector('.ig-button.prev');
+    const igNext = document.querySelector('.ig-button.next');
+
+    if (igViewport && igPrev && igNext) {
+        const getSlideWidth = () => igViewport.querySelector('.ig-slide')?.getBoundingClientRect().width || 0;
+
+        igPrev.addEventListener('click', () => {
+            igViewport.scrollBy({ left: -getSlideWidth() - 16, behavior: 'smooth' });
+        });
+        igNext.addEventListener('click', () => {
+            igViewport.scrollBy({ left: getSlideWidth() + 16, behavior: 'smooth' });
+        });
+
+        // Keyboard support
+        igViewport.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                igNext.click();
+            } else if (e.key === 'ArrowLeft') {
+                igPrev.click();
+            }
+        });
     }
 });

@@ -1,0 +1,22 @@
+:root {
+  /* Color Palette */
+  --brand-dark: #002e3b;      /* Confidence, depth */
+  --brand-primary: #007fa3;   /* Energy, trust */
+  --brand-accent: #19cfdc;    /* Freshness, action */
+  --neutral-light: #f5f5f5;
+  --neutral-mid:   #cccccc;
+  --text-primary:  #1a1a1a;
+  --text-muted:    #666666;
+
+  /* Typography Scale (φ-based) */
+  --fs-base: 1rem;             /* 16px */
+  --fs-sm:   0.618rem;         /* ~10px */
+  --fs-lg:   1.618rem;         /* ~26px */
+  --fs-xl:   2.618rem;         /* ~42px */
+
+  /* Spacing System (8px base × φ) */
+  --space-sm: 0.5rem;          /* 8px */
+  --space-md: 0.809rem;        /* ~13px */
+  --space-lg: 1.309rem;        /* ~21px */
+  --space-xl: 2.118rem;        /* ~34px */
+}

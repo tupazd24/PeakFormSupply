@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeakForm Supply - Your Journey to Peak Performance</title>
+    <meta name="description" content="PeakForm Supply: coach-curated athletic kits for every discipline.">
+    <meta name="keywords" content="sports gear, athletic kits, curated sports equipment, performance, fitness">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles can be added here if needed */
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop');
+        }
+    </style>
+    <link rel="stylesheet" href="styles/custom.css">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header Section -->
+    <header class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <span class="text-2xl font-bold text-white">PeakForm</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-300 hover:text-amber-400 transition">Home</a>
+                <a href="#products" class="text-gray-300 hover:text-amber-400 transition">Kits</a>
+                <a href="#quiz" class="text-gray-300 hover:text-amber-400 transition">How It Works</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-amber-400 transition">Testimonials</a>
+                <a href="#contact" class="text-gray-300 hover:text-amber-400 transition">Contact</a>
+            </div>
+
+            <!-- Sign In Button -->
+            <div class="hidden md:block">
+                <a href="#" class="border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-white py-2 px-5 rounded-lg transition">
+                    Sign In
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 text-gray-300 hover:text-amber-400">Home</a>
+            <a href="#products" class="block py-2 text-gray-300 hover:text-amber-400">Kits</a>
+            <a href="#quiz" class="block py-2 text-gray-300 hover:text-amber-400">How It Works</a>
+            <a href="#testimonials" class="block py-2 text-gray-300 hover:text-amber-400">Testimonials</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-amber-400">Contact</a>
+            <a href="#" class="block mt-2 py-2 px-4 text-center bg-amber-500 text-white rounded-lg">Sign In</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center hero-bg bg-cover bg-center">
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="relative z-10 text-center px-4 scroll-animate">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                    Your Journey to Peak Performance Starts Here
+                </h1>
+                <p class="mt-4 text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto">
+                    Coach-curated kits, sizing certainty, and a Perform-or-Replace guarantee.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#quiz" class="bg-amber-500 hover:bg-amber-600 text-white py-3 px-8 rounded-lg transition text-lg font-semibold shadow-lg">
+                        Take the Kit Quiz
+                    </a>
+                    <a href="#guarantee" class="text-white underline hover:text-amber-300 transition font-medium">
+                        Learn How It Works
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Highlights Section -->
+        <section id="products" class="bg-gray-900 py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 scroll-animate">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Top-Tier Gear, Curated for You</h2>
+                    <p class="text-gray-400 mt-2">Explore our best-sellers and coach-approved picks.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Best-Seller 1 -->
+                    <div class="bg-gray-800 rounded-lg p-6 text-center scroll-animate">
+                        <img src="https://images.unsplash.com/photo-1594758838427-a523c2a3a474?q=80&w=2070&auto=format&fit=crop" alt="Powerlifting Kit" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-bold text-white">Powerlifter's Kit</h3>
+                        <p class="text-amber-400 font-semibold">Best-Seller</p>
+                        <span class="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded-full mt-2">Limited Stock</span>
+                    </div>
+                    <!-- Best-Seller 2 -->
+                    <div class="bg-gray-800 rounded-lg p-6 text-center scroll-animate" style="animation-delay: 0.2s;">
+                        <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?q=80&w=2070&auto=format&fit=crop" alt="Trail Runner Kit" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-bold text-white">Trail Runner's Kit</h3>
+                        <p class="text-amber-400 font-semibold">Best-Seller</p>
+                    </div>
+                    <!-- Best-Seller 3 -->
+                    <div class="bg-gray-800 rounded-lg p-6 text-center scroll-animate" style="animation-delay: 0.4s;">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop" alt="CrossFit Kit" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-bold text-white">CrossFit Essentials Kit</h3>
+                        <p class="text-amber-400 font-semibold">Best-Seller</p>
+                    </div>
+                    <!-- Coach's Pick -->
+                    <div class="bg-amber-500 text-gray-900 rounded-lg p-6 text-center md:col-span-2 lg:col-span-1 scroll-animate" style="animation-delay: 0.6s;">
+                        <img src="https://images.unsplash.com/photo-1571942674908-55a339953f29?q=80&w=2070&auto=format&fit=crop" alt="Coach's Pick" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-bold">Coach's Pick of the Month</h3>
+                        <p class="font-semibold">The Recovery Pro Bundle</p>
+                        <span class="inline-block bg-gray-800 text-white text-xs px-2 py-1 rounded-full mt-2">New Arrival</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz-to-Kits Section -->
+        <section id="quiz" class="bg-gray-800 py-20">
+            <div class="container mx-auto px-6 text-center">
+                <div class="scroll-animate">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Find Your Perfect Kit in 3 Steps</h2>
+                    <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Our quiz matches you with gear that’s tailored to your goals, discipline, and experience.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 mt-12 text-left">
+                    <!-- Step 1 -->
+                    <div class="bg-gray-700 p-6 rounded-lg scroll-animate">
+                        <div class="flex items-center mb-4">
+                            <span class="text-4xl font-bold text-amber-500 mr-4">1</span>
+                            <h3 class="text-xl font-bold text-white">Take the Quiz</h3>
+                        </div>
+                        <p class="text-gray-400">Answer a few quick questions about your training style and goals.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="bg-gray-700 p-6 rounded-lg scroll-animate" style="animation-delay: 0.2s;">
+                        <div class="flex items-center mb-4">
+                            <span class="text-4xl font-bold text-amber-500 mr-4">2</span>
+                            <h3 class="text-xl font-bold text-white">Get Matched</h3>
+                        </div>
+                        <p class="text-gray-400">Receive a personalized kit recommendation from our expert coaches.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="bg-gray-700 p-6 rounded-lg scroll-animate" style="animation-delay: 0.4s;">
+                        <div class="flex items-center mb-4">
+                            <span class="text-4xl font-bold text-amber-500 mr-4">3</span>
+                            <h3 class="text-xl font-bold text-white">Unbox & Perform</h3>
+                        </div>
+                        <p class="text-gray-400">Your curated kit arrives, ready for you to crush your next workout.</p>
+                    </div>
+                </div>
+                <div class="mt-12 scroll-animate">
+                    <a href="#" class="bg-amber-500 hover:bg-amber-600 text-white py-3 px-8 rounded-lg transition text-lg font-semibold shadow-lg">
+                        Start My Kit Quiz
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coach Notes Section -->
+        <section id="coach-notes" class="bg-gray-900 py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 scroll-animate">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Wisdom from the Pros</h2>
+                    <p class="text-gray-400 mt-2">Expert tips, mini-guides, and video insights from our coaches.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Coach Note 1: Tip -->
+                    <div class="bg-gray-800 rounded-lg p-6 scroll-animate">
+                        <h3 class="text-xl font-bold text-amber-400 mb-2">Tip of the Day</h3>
+                        <p class="text-gray-300">Proper hydration isn't just for workout days. Aim for 3-4 liters daily to maintain peak performance and aid recovery.</p>
+                    </div>
+                    <!-- Coach Note 2: Mini-Guide -->
+                    <div class="bg-gray-800 rounded-lg p-6 scroll-animate" style="animation-delay: 0.2s;">
+                        <h3 class="text-xl font-bold text-amber-400 mb-2">Mini-Guide: Activating Your Glutes</h3>
+                        <p class="text-gray-300">Before squats, perform 3 sets of 15 banded side steps and glute bridges to ensure proper muscle engagement and prevent injury.</p>
+                    </div>
+                    <!-- Coach Note 3: Video -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden scroll-animate" style="animation-delay: 0.4s;">
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop" alt="Coach video thumbnail" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                                <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path></svg>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-amber-400 mb-2">Video: Perfecting Your Kettlebell Swing</h3>
+                            <p class="text-gray-300">Coach Mike breaks down the hip hinge, the most critical part of a powerful and safe kettlebell swing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof Wall Section -->
+        <section id="social-proof" class="bg-gray-800 py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 scroll-animate">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Join the #PeakFormPR Movement</h2>
+                    <p class="text-gray-400 mt-2">See how our community is crushing their goals with PeakForm gear.</p>
+                </div>
+                <!-- Instagram Feed -->
+                <div class="instagram-grid mb-16 scroll-animate">
+                    <img src="https://images.unsplash.com/photo-1549060279-7e168f91c2b5?w=400" alt="Instagram post" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400" alt="Instagram post" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=400" alt="Instagram post" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1574680096145-f844349f0409?w=400" alt="Instagram post" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=400" alt="Instagram post" class="w-full h-full object-cover rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=400" alt="Instagram post" class="w-full h-full object-cover rounded-lg">
+                </div>
+                <!-- Customer Photo Carousel -->
+                <div class="relative carousel-container max-w-3xl mx-auto scroll-animate">
+                    <div class="carousel-track">
+                        <div class="carousel-item text-center">
+                            <img src="images/connor-james.jpg" alt="Customer photo" class="w-32 h-32 rounded-full mx-auto mb-4">
+                            <p class="text-gray-300 italic">"Just hit a new deadlift PR with my Powerlifter's Kit. The support and quality are unmatched."</p>
+                            <p class="text-amber-400 font-bold mt-2">- @ConnorJ_Lifts</p>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <img src="images/maya-chen.jpg" alt="Customer photo" class="w-32 h-32 rounded-full mx-auto mb-4">
+                            <p class="text-gray-300 italic">"10 miles on the trail today and felt amazing. This gear is a game-changer!"</p>
+                            <p class="text-amber-400 font-bold mt-2">- @MayaRunsWild</p>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <img src="images/avery-thompson.jpg" alt="Customer photo" class="w-32 h-32 rounded-full mx-auto mb-4">
+                            <p class="text-gray-300 italic">"Crushed my WOD thanks to the CrossFit Essentials. Ready for whatever's next!"</p>
+                            <p class="text-amber-400 font-bold mt-2">- @AveryT_Fit</p>
+                        </div>
+                    </div>
+                    <button class="carousel-button prev">&lt;</button>
+                    <button class="carousel-button next">&gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="bg-gray-900 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-white mb-12 scroll-animate">What Our Athletes Say</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1: Connor James -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center scroll-animate">
+                        <img src="images/connor-james.jpg" alt="Portrait of Connor James" class="w-24 h-24 rounded-full mx-auto">
+                        <h3 class="text-xl font-semibold text-white mt-4">Connor James</h3>
+                        <p class="text-sm text-amber-400 mb-4">Powerlifter</p>
+                        <p class="text-gray-300 italic leading-relaxed">“PeakForm’s curated powerlifting kit gave me the exact gear I needed to hit new PRs—fits like a glove and ships fast every time.”</p>
+                    </div>
+                    <!-- Testimonial 2: Maya Chen -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center scroll-animate" style="animation-delay: 0.2s;">
+                        <img src="images/maya-chen.jpg" alt="Portrait of Maya Chen" class="w-24 h-24 rounded-full mx-auto">
+                        <h3 class="text-xl font-semibold text-white mt-4">Maya Chen</h3>
+                        <p class="text-sm text-amber-400 mb-4">Trail Runner</p>
+                        <p class="text-gray-300 italic leading-relaxed">“I’ve never felt more confident on rugged trails. The lightweight gear and coach notes transformed my long runs.”</p>
+                    </div>
+                    <!-- Testimonial 3: Avery Thompson -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center scroll-animate" style="animation-delay: 0.4s;">
+                        <img src="images/avery-thompson.jpg" alt="Portrait of Avery Thompson" class="w-24 h-24 rounded-full mx-auto">
+                        <h3 class="text-xl font-semibold text-white mt-4">Avery Thompson</h3>
+                        <p class="text-sm text-amber-400 mb-4">CrossFit Enthusiast</p>
+                        <p class="text-gray-300 italic leading-relaxed">“The Perform-or-Replace guarantee takes all the risk out of trying new equipment. Now I’m fully focused on my WODs.”</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guarantee Section -->
+        <section id="guarantee" class="bg-gray-800 py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 scroll-animate">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Your Performance, Guaranteed</h2>
+                    <p class="text-gray-400 mt-2">We stand by our gear, so you can focus on what matters.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12 text-center">
+                    <!-- Guarantee 1: 90-Day Perform-or-Replace -->
+                    <div class="flex flex-col items-center scroll-animate">
+                        <div class="bg-gray-700 p-4 rounded-full mb-4">
+                            <svg class="w-10 h-10 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">90-Day Perform-or-Replace</h3>
+                        <p class="text-gray-400">If our gear doesn't meet your standards, we'll replace it. No questions asked.</p>
+                    </div>
+                    <!-- Guarantee 2: Free First Exchange -->
+                    <div class="flex flex-col items-center scroll-animate" style="animation-delay: 0.2s;">
+                        <div class="bg-gray-700 p-4 rounded-full mb-4">
+                            <svg class="w-10 h-10 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h5M20 20v-5h-5m5-5a9 9 0 01-14.65 5.35M4 9a9 9 0 0114.65-5.35"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Free First Exchange</h3>
+                        <p class="text-gray-400">Get the perfect fit with free shipping on your first size exchange.</p>
+                    </div>
+                    <!-- Guarantee 3: Secure Checkout -->
+                    <div class="flex flex-col items-center scroll-animate" style="animation-delay: 0.4s;">
+                        <div class="bg-gray-700 p-4 rounded-full mb-4">
+                            <svg class="w-10 h-10 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Secure Checkout</h3>
+                        <p class="text-gray-400">Your data is protected with industry-leading encryption.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seasonal Drops Section -->
+        <section id="seasonal-drops" class="bg-gray-900 py-20 relative">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1580261450048-1b52b4243803?q=80&w=2070&auto=format&fit=crop'); filter: blur(8px);"></div>
+            <div class="absolute inset-0 bg-black/70"></div>
+            <div class="container mx-auto px-6 text-center relative z-10 scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Winter '25 Drop is Coming</h2>
+                <p class="text-gray-300 mt-2 mb-8">Get ready for our new collection of cold-weather performance gear.</p>
+                <div id="countdown" class="flex justify-center gap-4 md:gap-8 text-white mb-8">
+                    <div class="text-center bg-gray-800/50 p-4 rounded-lg countdown-item">
+                        <span id="days" class="text-4xl font-bold">00</span>
+                        <p class="text-sm">Days</p>
+                    </div>
+                    <div class="text-center bg-gray-800/50 p-4 rounded-lg countdown-item">
+                        <span id="hours" class="text-4xl font-bold">00</span>
+                        <p class="text-sm">Hours</p>
+                    </div>
+                    <div class="text-center bg-gray-800/50 p-4 rounded-lg countdown-item">
+                        <span id="minutes" class="text-4xl font-bold">00</span>
+                        <p class="text-sm">Minutes</p>
+                    </div>
+                    <div class="text-center bg-gray-800/50 p-4 rounded-lg countdown-item">
+                        <span id="seconds" class="text-4xl font-bold">00</span>
+                        <p class="text-sm">Seconds</p>
+                    </div>
+                </div>
+                <a href="#email-capture" class="bg-amber-500 hover:bg-amber-600 text-white py-3 px-8 rounded-lg transition text-lg font-semibold shadow-lg">
+                    Get Early Access
+                </a>
+            </div>
+        </section>
+
+        <!-- Email Capture Section -->
+        <section id="email-capture" class="bg-gray-800 py-20">
+            <div class="container mx-auto px-6 text-center max-w-2xl scroll-animate">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Join the PeakForm Pack</h2>
+                <p class="text-gray-300 mt-2 mb-6">Sign up for exclusive offers, training tips, and 10% off your first order.</p>
+                <form class="flex flex-col md:flex-row gap-4">
+                    <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                    <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-white py-3 px-8 rounded-lg transition font-semibold">Sign Up</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 PeakForm Supply. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="hover:text-amber-400">Facebook</a>
+                <a href="#" class="hover:text-amber-400">Instagram</a>
+                <a href="#" class="hover:text-amber-400">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animations.js"></script>
+
+</body>
+</html>

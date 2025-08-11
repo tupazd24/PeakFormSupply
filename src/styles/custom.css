@@ -63,7 +63,7 @@
   overflow: hidden; /* keeps edges tidy while still allowing scroll inside track */
   position: relative;
 }
-
+ 
 /* --- Track uses native horizontal scroll + snap --- */
 .pf-ig__track {
   list-style: none;
